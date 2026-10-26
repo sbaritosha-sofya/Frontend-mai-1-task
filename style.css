@@ -39,6 +39,17 @@ a {
   color: inherit;
 }
 
+.brand,
+.main-nav__item,
+.block__title,
+.more-link,
+.tour-panel__title,
+.tour-panel__month,
+.footer-col__title,
+.footer-links__item {
+  white-space: nowrap;
+}
+
 .brand:hover,
 .main-nav__item:hover {
   opacity: 0.75;
@@ -77,8 +88,10 @@ a {
 }
 
 .wrap {
-  width: 1280px;
+  width: 100%;
+  max-width: 1280px;
   margin: 0 auto;
+  padding: 0 20px;
 }
 
 .block {
@@ -133,13 +146,14 @@ a {
 }
 
 .hero__photo {
-  width: 856px;
+  flex: 1;
+  min-width: 0;
   height: 497px;
   border-radius: 12px;
 }
 
 .hero__side {
-  width: 416px;
+  flex: 0 0 416px;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -514,4 +528,290 @@ a {
   border-top: 1px solid #555;
   text-align: center;
   color: #888;
+}
+
+@media (max-width: 1319px) {
+  .site-header .wrap {
+    height: auto;
+    flex-direction: column;
+    gap: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .main-nav__list {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-nav__item:not(:last-child)::after {
+    display: none;
+  }
+
+  .event {
+    flex-wrap: wrap;
+    gap: 30px;
+    padding: 24px;
+  }
+
+  .event__photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .event__details {
+    flex: 1;
+    min-width: 280px;
+  }
+
+  .ticket-btn {
+    margin-left: auto;
+  }
+
+  .news-line {
+    flex-wrap: wrap;
+    gap: 60px;
+  }
+
+  .news,
+  .tour-panel {
+    width: 100%;
+  }
+
+  .news__grid {
+    justify-content: space-between;
+  }
+
+  .news__card,
+  .news__card img,
+  .news__title,
+  .news__text {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .footer-grid {
+    flex-wrap: wrap;
+    gap: 40px;
+  }
+
+  .footer-col,
+  .footer-brand {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .hero {
+    flex-wrap: wrap;
+  }
+
+  .hero__photo {
+    width: 100%;
+    height: auto;
+  }
+
+  .hero__side {
+    width: 100%;
+    flex: 1 1 100%;
+    flex-direction: row;
+  }
+
+  .preview-card {
+    flex: 1;
+  }
+}
+
+@media (max-width: 686px) {
+
+  .hero__side {
+    width: 100%;
+    flex: 1 1 100%;
+  }
+}
+
+@media (max-width: 1023px) {
+  .block__title {
+    font-size: 36px;
+  }
+
+  .briefs {
+    flex-wrap: wrap;
+    gap: 24px;
+  }
+
+  .brief {
+    flex: 1 1 45%;
+    min-width: 240px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    font-size: 15px;
+  }
+
+  .block {
+    margin-top: 80px;
+  }
+
+  .block__head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 40px;
+  }
+
+  .block__title {
+    font-size: 30px;
+  }
+
+  .more-link {
+    font-size: 18px;
+  }
+
+  .main-nav__item {
+    font-size: 14px;
+  }
+
+  .main-nav__list {
+    gap: 20px;
+  }
+
+  .hero__side {
+    flex-direction: row;
+  }
+
+  .preview-card {
+    flex: 1;
+  }
+
+  .event {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .event__date {
+    flex-direction: row;
+    width: auto;
+    height: auto;
+    gap: 12px;
+  }
+
+  .event__day {
+    font-size: 48px;
+    margin-bottom: 0;
+  }
+
+  .event__month {
+    font-size: 24px;
+  }
+
+  .event__name {
+    font-size: 24px;
+  }
+
+  .event__desc {
+    display: none;
+  }
+
+  .event__details {
+    width: 100%;
+    min-width: auto;
+  }
+
+  .ticket-btn {
+    width: 100%;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .news__grid {
+    flex-direction: column;
+  }
+
+  .tour-panel__inner {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .tour-panel__side {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .tour-panel__days {
+    grid-template-columns: repeat(7, 1fr);
+  }
+
+  .tour-panel__days div {
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .brief {
+    flex: 1 1 100%;
+  }
+
+  .footer-grid {
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-links {
+    flex-wrap: wrap;
+  }
+
+  .site-footer {
+    margin-top: 100px;
+    padding-top: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .brand {
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 100%;
+  }
+
+  .main-nav__list {
+    gap: 14px;
+  }
+
+  .main-nav__item {
+    font-size: 13px;
+  }
+
+  .preview-card {
+    gap: 12px;
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .preview-card img {
+    width: 56px;
+    height: 56px;
+  }
+
+  .event__meta {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .block__title {
+    font-size: 26px;
+  }
+
+  .tour-panel__cover {
+    height: 200px;
+  }
+
+  .tour-panel__title {
+    font-size: 24px;
+  }
+
+  .tour-panel__month {
+    font-size: 24px;
+  }
 }
