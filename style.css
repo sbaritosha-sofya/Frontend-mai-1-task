@@ -34,6 +34,48 @@ button {
   cursor: pointer;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.brand:hover,
+.main-nav__item:hover {
+  opacity: 0.75;
+}
+
+.more-link:hover {
+  color: var(--accent);
+}
+
+.footer-links__item:hover,
+.mail:hover {
+  text-decoration: underline;
+}
+
+.preview-card:hover {
+  background: #d5d5d5;
+}
+
+.news__card:hover {
+  opacity: 0.9;
+}
+
+.ticket-btn,
+.tour-panel__nav button {
+  transition: background 0.2s, transform 0.2s;
+}
+
+.ticket-btn:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
+.tour-panel__nav button:hover {
+  background: var(--accent-dark);
+  transform: translateY(-2px);
+}
+
 .wrap {
   width: 1280px;
   margin: 0 auto;
@@ -269,6 +311,7 @@ button {
 }
 
 .news__card {
+  display: block;
   width: 306px;
 }
 
